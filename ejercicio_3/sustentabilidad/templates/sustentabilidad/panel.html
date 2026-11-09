@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; color: #222; }
+        h1 { color: #2e7d32; }
+        .tarjeta { display: inline-block; padding: 16px 24px; margin: 8px 16px 8px 0;
+                   border: 1px solid #c8e6c9; border-radius: 8px; background: #f1f8e9; }
+        table { border-collapse: collapse; margin-top: 24px; }
+        th, td { border: 1px solid #ccc; padding: 8px 16px; text-align: left; }
+        th { background: #2e7d32; color: white; }
+    </style>
+</head>
+<body>
+    <h1>{{ titulo }}</h1>
+
+    <div class="tarjeta">
+        <strong>Total de emisiones</strong><br>
+        {{ total_emisiones }} kg CO2
+    </div>
+
+    <div class="tarjeta">
+        <strong>Planta de mayor consumo</strong><br>
+        {{ planta_mayor_consumo }} ({{ consumo_planta_mayor }} kWh)
+    </div>
+
+    <table>
+        <tr>
+            <th>Planta</th>
+            <th>Consumo (kWh)</th>
+            <th>Emisiones (kg CO2)</th>
+        </tr>
+        {% for fila in detalle_plantas %}
+        <tr>
+            <td>{{ fila.planta }}</td>
+            <td>{{ fila.consumo_kwh }}</td>
+            <td>{{ fila.emisiones_kg }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="3">No hay registros de consumo.</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

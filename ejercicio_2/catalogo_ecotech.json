@@ -1,0 +1,27 @@
+[
+    {
+        "tipo": "DispositivoEcológico",
+        "codigo": "ECO-100",
+        "nombre": "Lámpara LED Solar",
+        "precio": 15000.0,
+        "stock": 40
+    },
+    {
+        "tipo": "PanelSolar",
+        "codigo": "PS-200",
+        "nombre": "Panel Solar Monocristalino",
+        "precio": 185000.0,
+        "stock": 12,
+        "potencia_watts": 450,
+        "eficiencia": 21.5
+    },
+    {
+        "tipo": "PanelSolar",
+        "codigo": "PS-300",
+        "nombre": "Panel Solar Policristalino",
+        "precio": 140000.0,
+        "stock": 8,
+        "potencia_watts": 330,
+        "eficiencia": 17.0
+    }
+]
